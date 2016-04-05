@@ -31,7 +31,7 @@
 	<repositories>
 		<repository>
 			<id>filestore-maven-repository</id>
-			<url>http://nexus-jayblanc.rhcloud.com/nexus/content/groups/public/</url>
+			<url>http://nexus-jayblanc.rhcloud.com/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -43,7 +43,7 @@
 	<pluginRepositories>
 		<pluginRepository>
 			<id>filestore-maven-repository</id>
-			<url>http://nexus-jayblanc.rhcloud.com/nexus/content/groups/public/</url>
+			<url>http://nexus-jayblanc.rhcloud.com/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -96,12 +96,12 @@
 		<repository>
 			<id>filestore-maven-repository</id>
 			<name>Fielstore Releases</name>
-			<url>http://nexus-jayblanc.rhcloud.com/nexus/content/repositories/releases/</url>
+			<url>http://nexus-jayblanc.rhcloud.com/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>filestore-maven-repository</id>
 			<name>Filestore Snapshots</name>
-			<url>http://nexus-jayblanc.rhcloud.com/nexus/content/repositories/snapshots/</url>
+			<url>http://nexus-jayblanc.rhcloud.com/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
