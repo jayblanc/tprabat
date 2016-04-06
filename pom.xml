@@ -183,11 +183,12 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	
+
 	<modules>
 		<module>filestore-api</module>
 		<module>filestore-ejb</module>
 		<module>filestore-web</module>
 		<module>filestore-ear</module>
 	</modules>
+
 </project>

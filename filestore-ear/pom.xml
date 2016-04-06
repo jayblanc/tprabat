@@ -72,5 +72,24 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<profiles>
+		<profile>
+		<id>openshift</id>
+		<build>
+				<finalName>filestore</finalName>
+				<plugins>
+					<plugin>
+								<groupId>org.apache.maven.plugins</groupId>
+								<artifactId>maven-ear-plugin</artifactId>
+								<version>${version.ear.plugin}</version>
+								<configuration>
+										<failOnMissingWebXml>false</failOnMissingWebXml>
+										<outputDirectory>deployments</outputDirectory>
+										<warName>ROOT</warName>
+								</configuration>
+						</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
