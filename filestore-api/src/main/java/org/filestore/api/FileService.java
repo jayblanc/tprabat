@@ -4,35 +4,18 @@ import java.util.List;
 
 import javax.activation.DataHandler;
 import javax.ejb.Remote;
-import javax.jws.WebMethod;
-import javax.jws.WebParam;
-import javax.jws.WebResult;
-import javax.jws.WebService;
-import javax.jws.soap.SOAPBinding;
-import javax.jws.soap.SOAPBinding.Style;
-import javax.xml.ws.BindingType;
 
 @Remote
-@WebService
-@SOAPBinding(style=Style.RPC)
 public interface FileService {
 	
-	@WebMethod(operationName="postfile")
-	public String postFile(@WebParam(name="owner") String owner, @WebParam(name="receivers") List<String> receivers, @WebParam(name="message") String message, @WebParam(name="filename") String name, @WebParam(name="filecontent") byte[] data) throws FileServiceException;
+	public String postFile(String owner, List<String> receivers, String message, String name, byte[] data) throws FileServiceException;
 	
-	@WebMethod(operationName="postfile2")
-	public String postFile(@WebParam(name="owner") String owner, @WebParam(name="receivers") List<String> receivers, @WebParam(name="message") String message, @WebParam(name="filename") String name, @WebParam(name="filedata") DataHandler data) throws FileServiceException;
+	public String postFile(String owner, List<String> receivers, String message, String name, DataHandler data) throws FileServiceException;
 	
-	@WebMethod(operationName="getfile")
-	@WebResult(name="fileitem")
-	public FileItem getFile(@WebParam(name="id") String id) throws FileServiceException;
+	public FileItem getFile(String id) throws FileServiceException;
 	
-	@WebMethod(operationName="getfilecontent")
-	@WebResult(name="filecontent")
-	public byte[] getWholeFileContent(@WebParam(name="id") String id) throws FileServiceException;
+	public byte[] getWholeFileContent(String id) throws FileServiceException;
 	
-	@WebMethod(operationName="getfilecontent2")
-	@WebResult(name="filecontent")
-	public DataHandler getFileData(@WebParam(name="id") String id) throws FileServiceException;
+	public DataHandler getFileData(String id) throws FileServiceException;
 
 }
