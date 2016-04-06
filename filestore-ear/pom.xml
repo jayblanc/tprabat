@@ -83,7 +83,9 @@
 								<artifactId>maven-ear-plugin</artifactId>
 								<version>${version.ear.plugin}</version>
 								<configuration>
+										<failOnMissingWebXml>false</failOnMissingWebXml>
 										<outputDirectory>deployments</outputDirectory>
+										<warName>ROOT</warName>
 								</configuration>
 						</plugin>
 				</plugins>
