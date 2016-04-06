@@ -1,0 +1,32 @@
+----------------------------------------------------------------
+Wed Apr 06 16:22:47 WEST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-0153-ec2b-34fc-000007e1c9d8 
+on database directory memory:/home/jerome/Work/workspace-rabat/filestore/filestore-ejb/unit-testing-jpa with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 
+Loaded from file:/home/jerome/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_72-b15
+user.dir=/home/jerome/Work/workspace-rabat/filestore/filestore-ejb
+os.name=Linux
+os.arch=amd64
+os.version=3.13.0-83-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Apr 06 16:22:50 WEST 2016:
+Shutting down instance a816c00e-0153-ec2b-34fc-000007e1c9d8 on database directory memory:/home/jerome/Work/workspace-rabat/filestore/filestore-ejb/unit-testing-jpa with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 
+----------------------------------------------------------------
+Wed Apr 06 16:22:50 WEST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance f33d40c7-0153-ec2b-34fc-000007e1c9d8 
+on database directory memory:/home/jerome/Work/workspace-rabat/filestore/filestore-ejb/unit-testing-jpa with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 
+Loaded from file:/home/jerome/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_72-b15
+user.dir=/home/jerome/Work/workspace-rabat/filestore/filestore-ejb
+os.name=Linux
+os.arch=amd64
+os.version=3.13.0-83-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Apr 06 16:22:50 WEST 2016:
+Shutting down instance f33d40c7-0153-ec2b-34fc-000007e1c9d8 on database directory memory:/home/jerome/Work/workspace-rabat/filestore/filestore-ejb/unit-testing-jpa with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 

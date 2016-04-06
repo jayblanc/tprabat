@@ -1,4 +1,4 @@
-package org.filestore.store;
+package org.filestore.ejb.store;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -9,6 +9,8 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.filestore.ejb.store.BinaryStoreService;
 import org.filestore.ejb.store.BinaryStoreServiceBean;
@@ -19,6 +21,7 @@ import org.junit.Test;
 
 public class BinaryStoreServiceTest {
 	
+	private static final Logger LOGGER = Logger.getLogger(BinaryStoreServiceTest.class.getName());
 	private static BinaryStoreService service;
 	
 	@BeforeClass
@@ -34,12 +37,14 @@ public class BinaryStoreServiceTest {
 			
 		assertTrue(service.exists(key));
 		assertFalse(service.exists(wrongkey));
+		LOGGER.log(Level.INFO, "testPut() ok");
 	}
 	
 	@Test (expected=BinaryStreamNotFoundException.class)
 	public void testGetWrongKey() throws BinaryStoreServiceException, BinaryStreamNotFoundException {
 		String wrongkey = "akeythatdoesnotexists";
 		service.get(wrongkey);
+		LOGGER.log(Level.INFO, "testGetWrongKey() ok");
 	}
 	
 	@Test
@@ -55,6 +60,7 @@ public class BinaryStoreServiceTest {
 			}
 			String retreive = new String(baos.toByteArray()); 
 			assertEquals(retreive, content);
+			LOGGER.log(Level.INFO, "testGet() ok");
 		} catch (IOException e) {
 			fail(e.getMessage());
 		}

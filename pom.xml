@@ -17,7 +17,14 @@
 		<version.jar.plugin>2.6</version.jar.plugin>
 		<version.ejb.plugin>2.5.1</version.ejb.plugin>
 		<version.war.plugin>2.6</version.war.plugin>
+		<version.dependency.plugin>2.10</version.dependency.plugin>
+		<version.jboss.resteasy>3.0.14.Final</version.jboss.resteasy>
 		<version.junit>4.12</version.junit>
+		<version.jmock>2.8.1</version.jmock>
+		<version.shrinkwrap>1.2.2</version.shrinkwrap>
+		<version.shrinkwrap-resolver>2.1.1</version.shrinkwrap-resolver>
+		<version.arquillian>1.1.11.Final</version.arquillian>
+		<version.wildfly-arquillian>1.1.0.Beta2</version.wildfly-arquillian>
 		<version.javaee>7.0</version.javaee>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<maven.compiler.source>1.7</maven.compiler.source>
@@ -78,16 +85,72 @@
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-web-api</artifactId>
+				<version>${version.javaee}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>fr.miage.jayblanc</groupId>
+				<artifactId>filestore-api</artifactId>
+				<version>${project.version}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
 				<groupId>fr.miage.jayblanc</groupId>
 				<artifactId>filestore-ejb</artifactId>
 				<version>${project.version}</version>
 				<type>ejb</type>
 			</dependency>
 			<dependency>
+				<groupId>fr.miage.jayblanc</groupId>
+				<artifactId>filestore-web</artifactId>
+				<version>${project.version}</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+				<groupId>fr.miage.jayblanc</groupId>
+				<artifactId>filestore-ear</artifactId>
+				<version>${project.version}</version>
+				<type>ear</type>
+			</dependency>
+			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>${version.junit}</version>
 				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jmock</groupId>
+				<artifactId>jmock-junit4</artifactId>
+				<version>${version.jmock}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.shrinkwrap</groupId>
+				<artifactId>shrinkwrap-bom</artifactId>
+				<version>${version.shrinkwrap}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.shrinkwrap.resolver</groupId>
+				<artifactId>shrinkwrap-resolver-bom</artifactId>
+				<version>${version.shrinkwrap-resolver}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.arquillian</groupId>
+				<artifactId>arquillian-bom</artifactId>
+				<version>${version.arquillian}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.wildfly.arquillian</groupId>
+				<artifactId>wildfly-arquillian-container-managed</artifactId>
+				<version>${version.wildfly-arquillian}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -122,6 +185,9 @@
 	</build>
 	
 	<modules>
+		<module>filestore-api</module>
 		<module>filestore-ejb</module>
+		<module>filestore-web</module>
+		<module>filestore-ear</module>
 	</modules>
 </project>

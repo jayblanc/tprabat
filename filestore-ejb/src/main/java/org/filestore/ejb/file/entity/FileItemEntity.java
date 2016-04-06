@@ -1,6 +1,5 @@
-package org.filestore.ejb.file;
+package org.filestore.ejb.file.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -15,13 +14,15 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.filestore.api.FileItem;
+
 @Entity
 @NamedQueries({ 
-	@NamedQuery(name = "listAllFiles", query = "SELECT fi FROM FileItem fi"),
-	@NamedQuery(name = "findExpiredFiles", query = "SELECT fi FROM FileItem fi WHERE fi.lastdownload < :limit ORDER BY fi.lastdownload DESC") 
+	@NamedQuery(name = "listAllFiles", query = "SELECT fi FROM FileItemEntity fi"),
+	@NamedQuery(name = "findExpiredFiles", query = "SELECT fi FROM FileItemEntity fi WHERE fi.lastdownload < :limit ORDER BY fi.lastdownload DESC") 
 })
 @Table(indexes={@Index(name="lastdownloadindex", columnList="lastdownload")})
-public class FileItem implements Serializable {
+public class FileItemEntity extends FileItem {
 
 	private static final long serialVersionUID = -1869502504816752908L;
 
@@ -42,7 +43,7 @@ public class FileItem implements Serializable {
 	private Date lastdownload;
 	private String stream;
 
-	public FileItem() {
+	public FileItemEntity() {
 		nbdownloads = 0;
 		creation = new Date();
 		lastdownload = creation;
@@ -162,7 +163,7 @@ public class FileItem implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		FileItem other = (FileItem) obj;
+		FileItemEntity other = (FileItemEntity) obj;
 		if (creation == null) {
 			if (other.creation != null)
 				return false;
