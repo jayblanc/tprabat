@@ -51,7 +51,7 @@ public class FileServiceListenerBean implements MessageListener {
 			msg.setRecipient(RecipientType.TO,new InternetAddress(owner));  
 			msg.setFrom(new InternetAddress("admin@filexchange.org","FileXChange"));  
 			msg.setContent("Hi, this mail confirm the upload of your file. The file will be accessible at url : " 
-					+ FileStoreConfig.getDownloadBaseUrl() + id + "/download", "text/html");
+					+ FileStoreConfig.getDownloadBaseUrl() + id + "/content", "text/html");
 			Thread.sleep(5000);
 			Transport.send(msg);
 		} catch ( Exception e ) {
@@ -66,7 +66,7 @@ public class FileServiceListenerBean implements MessageListener {
 			msg.setRecipient(RecipientType.TO,new InternetAddress(receiver));
 			msg.setFrom(new InternetAddress("admin@filexchange.org","FileXChange"));  
 			msg.setContent("Hi, a file has been uploaded for you and is accessible at url : <br/><br/>" 
-					+ FileStoreConfig.getDownloadBaseUrl() + id + "/download <br/><br/>" 
+					+ FileStoreConfig.getDownloadBaseUrl() + id + "/content <br/><br/>" 
 					+ "The sender lets you a message :<br/><br/>" + message, "text/html");
 			Thread.sleep(5000);
 			Transport.send(msg);  

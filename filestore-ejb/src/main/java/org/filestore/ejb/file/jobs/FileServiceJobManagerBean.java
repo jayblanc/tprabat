@@ -16,7 +16,7 @@ public class FileServiceJobManagerBean {
 	
 	private static final Logger LOGGER = Logger.getLogger(FileServiceJobManagerBean.class.getName());
 
-	@Schedule(minute="*", hour="*/24")
+	@Schedule(minute="*/5", hour="*")
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public void cleanExpiredFiles() {
 		LOGGER.log(Level.INFO, "Clean Expired File called");

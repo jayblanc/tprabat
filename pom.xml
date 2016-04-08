@@ -26,6 +26,10 @@
 		<version.arquillian>1.1.11.Final</version.arquillian>
 		<version.wildfly-arquillian>1.1.0.Beta2</version.wildfly-arquillian>
 		<version.javaee>7.0</version.javaee>
+		<version.wildfly-client>10.0.0.Final</version.wildfly-client>
+		<version.commons-cli>1.3.1</version.commons-cli>
+		<version.onejar.plugin>1.4.4</version.onejar.plugin>
+		<version.jaxws.plugin>1.12</version.jaxws.plugin>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<maven.compiler.source>1.7</maven.compiler.source>
 	</properties>
@@ -189,6 +193,7 @@
 		<module>filestore-ejb</module>
 		<module>filestore-web</module>
 		<module>filestore-ear</module>
+		<module>filestore-client</module>
 	</modules>
 
 </project>
